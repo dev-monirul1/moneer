@@ -8,7 +8,12 @@
 
     /* linear gradient start here */
   --error-btn-linearbg: 110deg, #5F5FFF 17.83%, #460061 90.11%;
+  --nav-hover-linear: 167deg, #FF3570 -3.61%, #FF6F33 86.04%;
   /* linear gradient end here */
+
+    /* colort start here */
+  --color-primary: #141778;
+  /*  color end here */
 
   /* responsive screen start here  */
    --breakpoint-*: initial;
@@ -22,4 +27,25 @@
   --breakpoint-4xl: 1760px;
   --breakpoint-5xl: 1920px;
   /* responsive screen end here  */
+}
+
+.container{
+  max-width: 1106px;
+  margin: 0 auto;
+}
+@media (max-width: 767.99px) {
+  .container{
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1153.99px) {
+  .container{
+    padding: 0 24px;
+  }
+}
+@media (min-width: 1154px) {
+  .container{
+    padding: 0 0;
+  }
 }
