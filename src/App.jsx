@@ -1,13 +1,21 @@
 import { useState } from 'react'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router'
+import Home from './components/Home'
+import About from './components/About'
 
 
 function App() {
 
-
+  const router = createBrowserRouter (
+    createRoutesFromElements(
+      <>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/about' element={<About/>}></Route>
+      </>
+    )
+  )
   return (
-    <>
-     <h1 className='text-red-500 text-[200px]'>hello</h1>
-    </>
+    <RouterProvider router={router}/>
   )
 }
 
