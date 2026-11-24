@@ -9,10 +9,14 @@
     /* linear gradient start here */
   --error-btn-linearbg: 110deg, #5F5FFF 17.83%, #460061 90.11%;
   --nav-hover-linear: 167deg, #FF3570 -3.61%, #FF6F33 86.04%;
+  --footer-linearbg: 286deg, #2A2AFF -70.7%, #550096 78.49%;
   /* linear gradient end here */
 
     /* colort start here */
   --color-primary: #141778;
+  --color-secondary: #FF5851;
+  --color-orange: #F7931A;
+  --color-gray1: #AEADAD;
   /*  color end here */
 
   /* responsive screen start here  */

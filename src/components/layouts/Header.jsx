@@ -11,14 +11,16 @@ const Header = () => {
       <div className="container">
         <div className="flex justify-between items-center ">
           <div className="">
-            <Image source={logo} alt='img' />
+            <Link to="/">
+              <Image source={logo} alt='img' />
+            </Link>
           </div>
           <div className="flex gap-9 items-center">
             <ul className='flex gap-[55px]'>
-              {menuData.map((item)=>(
+              {menuData.map((item) => (
                 <li key={item.id}>
-                <Link  to={item.url} className='text-white text-base font-lato font-extrabold tracking-[0.8px] relative after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:h-[2px] after:bg-linear-(--nav-hover-linear) after:content-[""] after:rounded-[3px] capitalize'>{item.text}</Link>
-              </li>
+                  <Link to={item.url} className='text-white text-base font-lato font-extrabold tracking-[0.8px] relative after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:h-[2px] after:bg-linear-(--nav-hover-linear) after:content-[""] after:rounded-[3px] capitalize'>{item.text}</Link>
+                </li>
               ))}
             </ul>
             <FaUser className='text-white cursor-pointer' />
