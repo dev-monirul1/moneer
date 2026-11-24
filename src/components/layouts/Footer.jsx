@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className='bg-linear-(--footer-linearbg) py-[110px] relative'>
       <div className="container">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <div className="w-[285px]">
             <Image source={logo} alt='img' />
             <p className='mt-6  text-base font-lato font-normal text-white leading-7 '>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo</p>
