@@ -4,6 +4,7 @@ import Home from './components/Home'
 import About from './components/About'
 import RootLayout from './components/layouts/RootLayout'
 import Error from './components/layouts/Error'
+import FaqIndex from './components/pages/faq/FaqIndex'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route element={<RootLayout/>}>
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
+          <Route path='/faq' element={<FaqIndex />}/>
         </Route>
       </>
     )
