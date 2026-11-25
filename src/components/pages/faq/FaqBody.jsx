@@ -8,7 +8,7 @@ import { faqData } from "../../../dummyData/faqData";
 const FaqBody = () => {
   const [activeTab, setActiveTab] = useState(faqData[0].tabKey);
   return (
-    <section className="pt-[105px] pb-[96px]">
+    <section className="pt-[105px] pb-[35px]">
       <div className="container">
         <Heading
           className="text-center font-montserrat font-bold text-[34px] text-black_2"
