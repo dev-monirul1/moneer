@@ -5,6 +5,7 @@ import About from './components/About'
 import RootLayout from './components/layouts/RootLayout'
 import Error from './components/layouts/Error'
 import FaqIndex from './components/pages/faq/FaqIndex'
+import ContactIndex from './components/pages/contact/ContactIndex'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/faq' element={<FaqIndex />}/>
+          <Route path='/contact-us' element={<ContactIndex />}/>
         </Route>
       </>
     )
