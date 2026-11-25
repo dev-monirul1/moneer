@@ -7,8 +7,8 @@ const FaqIndex = () => {
   return (
     <>
     <BreadCrumb title="faq" routeName="faq" parentRouteName='home' parentRouteUrl='/'/>
-    <FaqBody/>
-    <FaqContactForm/>
+    {/* <FaqBody/>
+    <FaqContactForm/> */}
     </>
   )
 }
