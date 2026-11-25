@@ -22,10 +22,10 @@ const Footer = () => {
     )
   }
   return (
-    <footer className='bg-linear-(--footer-linearbg) py-[110px] relative'>
+    <footer className='bg-linear-(--footer-linearbg) py-16 lg:py-20 xl:py-24 2xl:py-[110px] relative'>
       <div className="container">
-        <div className="flex justify-between ">
-          <div className="w-[285px]">
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 max-md:gap-x-10 max-lg:gap-x-20 lg:grid-cols-[285px_auto_360px] xl:grid-cols-[285px_auto_440px] justify-between ">
+          <div className="">
             <Image source={logo} alt='img' />
             <p className='mt-6  text-base font-lato font-normal text-white leading-7 '>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo</p>
             <div className="mt-5 grid grid-cols-1 gap-y-4">
@@ -68,9 +68,9 @@ const Footer = () => {
 
             </div>
           </div>
-          <div className="">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Heading varient='h3' text="Recent News" className='capitalize mt-2 font-montserrat font-bold leading-normal text-white text-2xl' />
-            <div className="mt-5.5 grid gird-cols-1 gap-y-[14px]">
+            <div className="mt-5.5 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-x-10 gap-y-[14px]">
               {recentNews.map((item)=>(
                 <RecentNewsard key={item.id} title={item.title} url={item.url} publishedDate={item.publishDate} />
               ))}
