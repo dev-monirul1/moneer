@@ -18,7 +18,7 @@ const FaqContactForm = () => {
     rememberMe: "",
   });
   const inputStyle =
-    "border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato outline-0";
+    "border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato outline-0 w-full";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -64,19 +64,19 @@ const FaqContactForm = () => {
   };
 
   return (
-    <section className="pt-[105px] pb-[180px] relative">
+    <section className="pt-14 pb-16 md:pb-20 lg:pt-[105px]  3xl:pb-[180px] relative">
       <Image
         source={form_shape}
         alt="img"
-        className="max-w-[960px] max-h-[676px] absolute right-0 top-1/2 -translate-y-1/2"
+        className="hidden  lg:inline max-w-[450px] 2xl:max-w-[650px] 3xl:max-w-[800px] 4xl:max-w-[960px] max-h-[676px] absolute right-0 top-1/2 -translate-y-1/2"
       />
       <div className="container">
-        <div className="grid grid-cols-[535px_auto] gap-x-[83px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[535px_auto] gap-x-[83px]">
           <div className="">
             <Heading
               varient="h3"
               text="Need More Answers?"
-              className="text-blue_1 font-montserrat text-[42px] font-bold"
+              className="text-blue_1 font-montserrat text-2xl sm:text-3xl md:text-[42px] font-bold"
             />
             <form onSubmit={handleSubmit}>
               <textarea
@@ -86,7 +86,7 @@ const FaqContactForm = () => {
                 placeholder="Your Question"
                 className="mt-4 w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] outline-0 resize-none"
               ></textarea>
-              <div className="grid grid-cols-2 gap-x-2.5 mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2.5 gap-y-4 mt-4">
                 <div className="">
                   <Input
                     value={formData.name}
