@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import logo from "../../assets/images/logo.png";
 import Image from "../utils/Image";
 import { FaUser } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { menuData } from "../../dummyData/menuData";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
@@ -11,13 +11,12 @@ import { FaXmark } from "react-icons/fa6";
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "auto";
-    return()=>{
-      document.body.style.overflow = "auto"
-    }
-
-  },[sidebarOpen])
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [sidebarOpen]);
 
   return (
     <header className="bg-primary py-4 absolute w-full top-0 left-0 z-50">
@@ -30,12 +29,18 @@ const Header = () => {
             <ul className="flex gap-x-10 xl:gap-[55px]">
               {menuData.map((item) => (
                 <li key={item.id}>
-                  <Link
+                  <NavLink
                     to={item.url}
-                    className='text-white text-base font-lato font-extrabold tracking-[0.8px] relative after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:h-[2px] after:bg-linear-(--nav-hover-linear) after:content-[""] after:rounded-[3px] capitalize'
+                    className={({ isActive }) =>
+                      `text-white text-base font-lato font-extrabold tracking-[0.8px] capitalize relative after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:transition-all after:duration-300 after:h-[2px] after:bg-linear-(--nav-hover-linear) after:content-[""] after:rounded-[3px] ${
+                        isActive
+                          ? "after:w-full"
+                          : "after:w-0 hover:after:w-full"
+                      }`
+                    }
                   >
                     {item.text}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -70,19 +75,34 @@ const Header = () => {
         <ul className="flex flex-col gap-y-7">
           {menuData.map((item) => (
             <li key={item.id}>
-              <Link
+              {/* <Link
                 to={item.url}
                 onClick={() => setSidebarOpen(false)}
                 className="text-white text-base font-lato font-bold tracking-[0.8px] capitalize"
               >
                 {item.text}
-              </Link>
+              </Link> */}
+              <NavLink
+                to={item.url}
+                onClick={() => setSidebarOpen(false)}
+                className={({ isActive }) =>
+                  `text-white text-base font-lato font-bold tracking-[0.8px] capitalize relative inline-block
+                    after:absolute after:content-[""] after:left-0 after:bottom-[-5px]
+                    after:h-[2px] after:bg-linear-(--nav-hover-linear)
+                    after:rounded-[3px] after:transition-all after:duration-300
+                    ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`
+                }
+              >
+                {item.text}
+              </NavLink>
             </li>
           ))}
         </ul>
         <div className="mt-10 flex gap-2 items-center">
           <FaUser className="text-white text-xl cursor-pointer" />
-          <span className="text-white text-base font-lato font-bold tracking-[0.8px] capitalize">Profile</span>
+          <span className="text-white text-base font-lato font-bold tracking-[0.8px] capitalize">
+            Profile
+          </span>
         </div>
       </aside>
     </header>

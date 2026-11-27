@@ -6,7 +6,7 @@ import RootLayout from './components/layouts/RootLayout'
 import Error from './components/layouts/Error'
 import FaqIndex from './components/pages/faq/FaqIndex'
 import ContactIndex from './components/pages/contact/ContactIndex'
-import ContactUsIndex from './components/pages/contact-us/ContactUsIndex'
+
 
 
 function App() {
